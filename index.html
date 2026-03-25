@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Banner Test</title>
+
+  <!-- SMART APP BANNER -->
+  <meta name="apple-itunes-app"
+        content="app-id=1148204349, app-argument=https://www.liverpool.com.mx/tienda/smartBanner?source=test">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .box {
+      margin: 20px 0;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    a {
+      display: block;
+      margin: 10px 0;
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🧪 Smart App Banner Test</h1>
+
+  <div class="box">
+    <h2>📌 Instrucciones</h2>
+    <p>1. Abre esta página en <strong>Safari iOS</strong></p>
+    <p>2. Deberías ver el banner arriba</p>
+    <p>3. Presiona <strong>OPEN</strong></p>
+    <p>4. Verifica qué URL llega a la app</p>
+  </div>
+
+  <div class="box">
+    <h2>🔗 Links de prueba</h2>
+
+    <!-- Universal Link válido -->
+    <a href="https://www.liverpool.com.mx/tienda/pdp/1178488708">
+      Ir a PDP (Universal Link válido)
+    </a>
+
+    <!-- Ruta custom -->
+    <a href="https://www.liverpool.com.mx/tienda/smartBanner?source=link">
+      Ir a /smartBanner
+    </a>
+
+    <!-- Mismo dominio con query -->
+    <a href="https://www.liverpool.com.mx/tienda/pdp/1178488708?test=1">
+      PDP con query param
+    </a>
+
+  </div>
+
+  <div class="box">
+    <h2>🧠 Info</h2>
+    <p><strong>User Agent:</strong></p>
+    <p id="ua"></p>
+
+    <p><strong>URL actual:</strong></p>
+    <p id="url"></p>
+  </div>
+
+  <script>
+    document.getElementById('ua').innerText = navigator.userAgent;
+    document.getElementById('url').innerText = window.location.href;
+
+    console.log("Smart Banner Test Loaded");
+  </script>
+
+</body>
+</html>
